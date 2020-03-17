@@ -7,12 +7,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CSharp
+namespace CSharpSecond_b
 {
     class Program
     {
 
-        static async Task Main(string[] args)
+        static async Task Main()
         {
 
             
