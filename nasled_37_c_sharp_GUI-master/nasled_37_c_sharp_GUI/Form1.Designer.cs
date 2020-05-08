@@ -1,4 +1,4 @@
-﻿namespace nasled_37_c_sharp_GUI
+namespace nasled_37_c_sharp_GUI
 {
     partial class Form1
     {
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelSquare = new System.Windows.Forms.Panel();
+            this.labelSquaresCounter = new System.Windows.Forms.Label();
             this.btnAddSquare = new System.Windows.Forms.Button();
             this.richTextBoxSquare = new System.Windows.Forms.RichTextBox();
             this.lblSquarePanelTitle = new System.Windows.Forms.Label();
@@ -46,7 +47,14 @@
             this.txtSqaurePrizmSide = new System.Windows.Forms.TextBox();
             this.txtSqaurePrizmTitle = new System.Windows.Forms.TextBox();
             this.btnCalculate = new System.Windows.Forms.Button();
-            this.labelSquaresCounter = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
             this.panelSquare.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -67,6 +75,14 @@
             this.panelSquare.Name = "panelSquare";
             this.panelSquare.Size = new System.Drawing.Size(368, 407);
             this.panelSquare.TabIndex = 0;
+            // 
+            // labelSquaresCounter
+            // 
+            this.labelSquaresCounter.AutoSize = true;
+            this.labelSquaresCounter.Location = new System.Drawing.Point(314, 8);
+            this.labelSquaresCounter.Name = "labelSquaresCounter";
+            this.labelSquaresCounter.Size = new System.Drawing.Size(0, 17);
+            this.labelSquaresCounter.TabIndex = 7;
             // 
             // btnAddSquare
             // 
@@ -188,7 +204,7 @@
             // 
             this.lblSqaurePrizm.AutoSize = true;
             this.lblSqaurePrizm.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblSqaurePrizm.Location = new System.Drawing.Point(146, 8);
+            this.lblSqaurePrizm.Location = new System.Drawing.Point(107, 8);
             this.lblSqaurePrizm.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSqaurePrizm.Name = "lblSqaurePrizm";
             this.lblSqaurePrizm.Size = new System.Drawing.Size(158, 29);
@@ -238,35 +254,79 @@
             // btnCalculate
             // 
             this.btnCalculate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnCalculate.Location = new System.Drawing.Point(382, 14);
+            this.btnCalculate.Location = new System.Drawing.Point(387, 11);
             this.btnCalculate.Margin = new System.Windows.Forms.Padding(2);
             this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.Size = new System.Drawing.Size(38, 442);
+            this.btnCalculate.Size = new System.Drawing.Size(28, 408);
             this.btnCalculate.TabIndex = 7;
             this.btnCalculate.Text = "C   A   L   C   U   L   A   T   E";
             this.btnCalculate.UseVisualStyleBackColor = true;
             this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
-            // labelSquaresCounter
+            // button1
             // 
-            this.labelSquaresCounter.AutoSize = true;
-            this.labelSquaresCounter.Location = new System.Drawing.Point(314, 8);
-            this.labelSquaresCounter.Name = "labelSquaresCounter";
-            this.labelSquaresCounter.Size = new System.Drawing.Size(0, 17);
-            this.labelSquaresCounter.TabIndex = 7;
+            this.button1.Location = new System.Drawing.Point(292, 424);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 36);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Save";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Save1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(41, 424);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 36);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Open";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.open1_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(443, 424);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 36);
+            this.button4.TabIndex = 11;
+            this.button4.Text = "Open";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.Open2_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(691, 424);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 36);
+            this.button5.TabIndex = 12;
+            this.button5.Text = "Save";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.Save2_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // openFileDialog2
+            // 
+            this.openFileDialog2.FileName = "openFileDialog2";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(797, 459);
+            this.ClientSize = new System.Drawing.Size(797, 472);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelSquare);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "37";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelSquare.ResumeLayout(false);
             this.panelSquare.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -296,6 +356,14 @@
         private System.Windows.Forms.TextBox txtSquarePrizmHeight;
         private System.Windows.Forms.Button btnAddSquare;
         private System.Windows.Forms.Label labelSquaresCounter;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog2;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog2;
     }
 }
 
